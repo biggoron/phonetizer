@@ -26,7 +26,9 @@ setuptools.setup(
     ],
     package_data={'phonetizer': ['phonetizer/lexique.parquet']},
     include_package_data=True,
-    scripts=['./scripts/word_to_phonem', './scripts/phonetizer-test'],
+    scripts=[
+        './scripts/sentence_to_phonem',
+        './scripts/phonetizer-test'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',

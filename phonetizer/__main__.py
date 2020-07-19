@@ -1,4 +1,4 @@
 import sys
-from . import word_to_phonem
+from . import sentence_to_phonem
 
-print(word_to_phonem(sys.argv[1]))
+print(sentence_to_phonem(sys.argv[1]))
