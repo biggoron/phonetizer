@@ -24,6 +24,8 @@ setuptools.setup(
         'pandas >= 0.22.0',
         'numpy >= 1.16.0'
     ],
+    package_data={'phonetizer': ['phonetizer/lexique.parquet']},
+    include_package_data=True,
     scripts=['./scripts/word_to_phonem', './scripts/phonetizer-test'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],

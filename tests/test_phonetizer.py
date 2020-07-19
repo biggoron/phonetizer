@@ -1,5 +1,7 @@
-from phonetizer import word_to_phonem
+import pytest
+from phonetizer import word_to_phonem, WordNotFoundError
 
 def test_word_to_phonem():
-    phonems = word_to_phonem('zorglub')
-    assert phonems == 'NOT IMPLEMENTED'
+    with pytest.raises(WordNotFoundError):
+        phonems = word_to_phonem('zorglub')
+    assert word_to_phonem('bonjour') == 'b§ZuR'
