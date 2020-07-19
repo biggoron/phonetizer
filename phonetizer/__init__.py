@@ -1,3 +1,4 @@
+import re
 import os
 
 import pandas as pd
@@ -15,3 +16,7 @@ def word_to_phonem(word):
     else:
         return matches.value_counts().index[0]
 
+def sentence_to_phonem(sentence):
+    words = re.findall(r"[\w']+", sentence)
+    phonems = [word_to_phonem(word) for word in words]
+    return ''.join(phonems)
