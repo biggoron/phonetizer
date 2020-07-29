@@ -9,7 +9,7 @@ class WordNotFoundError(Exception):
         
 def word_to_phonem(word):
     module_dir = os.path.dirname(os.path.realpath(__file__))
-    df = pd.read_parquet(os.path.join(module_dir, 'lexique.parquet'))
+    df = pd.read_parquet(os.path.join(module_dir, '..', 'data', 'lexique.parquet'))
     matches = df.loc[lambda row: row.ortho == word].phon
     if matches.shape[0] == 0:
         raise WordNotFoundError(word)

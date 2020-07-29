@@ -12,8 +12,10 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/biggoron/phonetizer",
-    packages=['phonetizer'],
-    package_dir={'phonetizer': 'phonetizer'},
+    packages=['phonetizer', 'phonetizer_transformer'],
+    package_dir={
+        'phonetizer': 'phonetizer',
+        'phonetizer_transformer': 'phonetizer_transformer'},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -24,11 +26,16 @@ setuptools.setup(
         'pandas >= 0.22.0',
         'numpy >= 1.16.0'
     ],
-    package_data={'phonetizer': ['phonetizer/lexique.parquet']},
+    package_data={
+        'phonetizer': ['data/lexique.parquet'],
+        'phonetizer_transformer': ['data/lexique.parquet'],
+    },
     include_package_data=True,
     scripts=[
         './scripts/sentence_to_phonem',
-        './scripts/phonetizer-test'],
+        './scripts/phonetizer-test',
+        './scripts/phonetizer-train-nn',
+    ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',
