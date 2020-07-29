@@ -20,6 +20,6 @@ $ sentence_to_phonem maison
 
 ## Todo
 
-- Create a lib for a transformer model, which infers prononciation of not found words. The lib can train a model to generate weights, and provides a model object which can load weights and infer phonemic translations.
+- Lib for nn inference of unknown words is up. Needs to be faster (preload model before inference). Use it to guess new words.
 - Parse Wiktionaire for more comprehensive dictionary
 - Create POS-Tagging to resolve non-homophonic homograms 
