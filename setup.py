@@ -39,4 +39,5 @@ setuptools.setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',
+    download_url='https://github.com/biggoron/phonetizer/archive/0.0.1.tar.gz'
 )
