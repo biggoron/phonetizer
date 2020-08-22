@@ -11,12 +11,22 @@ $ sentence_to_phonem maison
 -> mEz§
 ```
 
+## GCP API
+In Process...
+
 ## Under the cogs
 
 - Cuts sentence into words
 - Checks if word is in dictionary
 - If so returns phonemic translation
 - Else returns WordNotFoundError
+
+## Dev
+
+To dev in local while retaining access to GCP:
+```
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/gcp/jsons/phonetizer-dev-key.json
+```
 
 ## Todo
 
