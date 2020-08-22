@@ -5,17 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="phonetizer-fr-dan", # Replace with your own username
-    version="0.0.3b1",
+    version="0.0.3",
     author="Dan Ringwald",
     author_email="dan.ringwald12@gmail.com",
     description="Translates French text to phonetics",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/biggoron/phonetizer",
-    packages=['phonetizer', 'phonetizer_transformer'],
-    package_dir={
-        'phonetizer': 'phonetizer',
-        'phonetizer_transformer': 'phonetizer_transformer'},
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -38,5 +35,5 @@ setuptools.setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',
-    download_url='https://github.com/biggoron/phonetizer/archive/0.0.3b1.tar.gz'
+    download_url='https://github.com/biggoron/phonetizer/archive/0.0.3.tar.gz'
 )
