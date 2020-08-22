@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="phonetizer-fr-dan", # Replace with your own username
-    version="0.0.3-beta",
+    version="0.0.3b1",
     author="Dan Ringwald",
     author_email="dan.ringwald12@gmail.com",
     description="Translates French text to phonetics",
@@ -30,11 +30,6 @@ setuptools.setup(
         'fsspec>=0.8.0',
         'gcsfs==0.6.2'
     ],
-    package_data={
-        'phonetizer': ['data/lexique.parquet'],
-        'phonetizer_transformer': ['data/lexique.parquet'],
-    },
-    include_package_data=True,
     scripts=[
         './scripts/sentence_to_phonem',
         './scripts/phonetizer-test',
@@ -43,5 +38,5 @@ setuptools.setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',
-    download_url='https://github.com/biggoron/phonetizer/archive/0.0.3-beta.tar.gz'
+    download_url='https://github.com/biggoron/phonetizer/archive/0.0.3b1.tar.gz'
 )
