@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="phonetizer-fr-dan", # Replace with your own username
-    version="0.0.2",
+    version="0.0.3-beta",
     author="Dan Ringwald",
     author_email="dan.ringwald12@gmail.com",
     description="Translates French text to phonetics",
@@ -43,5 +43,5 @@ setuptools.setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',
-    download_url='https://github.com/biggoron/phonetizer/archive/0.0.2.tar.gz'
+    download_url='https://github.com/biggoron/phonetizer/archive/0.0.3-beta.tar.gz'
 )
