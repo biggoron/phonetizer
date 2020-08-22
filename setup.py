@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="phonetizer-fr-dan", # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Dan Ringwald",
     author_email="dan.ringwald12@gmail.com",
     description="Translates French text to phonetics",
@@ -24,7 +24,11 @@ setuptools.setup(
     install_requires=[
         'pytest',
         'pandas >= 0.22.0',
-        'numpy >= 1.16.0'
+        'numpy >= 1.16.0',
+        'google-cloud-storage>=1.30.0',
+        'pyarrow>=0.15.1',
+        'fsspec>=0.8.0',
+        'gcsfs==0.6.2'
     ],
     package_data={
         'phonetizer': ['data/lexique.parquet'],
@@ -39,5 +43,5 @@ setuptools.setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     python_requires='>=3.6',
-    download_url='https://github.com/biggoron/phonetizer/archive/0.0.1.tar.gz'
+    download_url='https://github.com/biggoron/phonetizer/archive/0.0.2.tar.gz'
 )
