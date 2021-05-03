@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="phonetizer-fr-dan", # Replace with your own username
-    version="0.0.4",
+    version="0.1.0",
     author="Dan Ringwald",
     author_email="dan.ringwald12@gmail.com",
-    description="Translates French text to phonetics",
+    description="Translates French words to phonetics. Checks phonetization.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/biggoron/phonetizer",
@@ -19,21 +19,15 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'pytest',
-        'pandas >= 0.22.0',
-        'numpy >= 1.16.0',
-        'google-cloud-storage>=1.30.0',
-        'pyarrow>=0.15.1',
-        'fsspec>=0.8.0',
-        'gcsfs==0.6.2'
+        'pandas >= 1.2.4',
+        'numpy >= 1.20.2',
+        'transformers>=4.5.1',
+        'biopython>=1.78',
+        'torch>=1.8.1',
     ],
     scripts=[
-        './scripts/sentence_to_phonem',
-        './scripts/phonetizer-test',
-        './scripts/phonetizer-train-nn',
+        './scripts/check_phonetisation',
     ],
-    setup_requires=['pytest-runner'],
-    tests_require=['pytest'],
     python_requires='>=3.6',
     download_url='https://github.com/biggoron/phonetizer/archive/0.0.4.tar.gz'
 )

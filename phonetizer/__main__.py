@@ -1,4 +1,8 @@
 import sys
-from . import sentence_to_phonem
+from . import PhonetizerModel
 
-print(sentence_to_phonem(sys.argv[1]))
+word = sys.argv[1]
+phon = sys.argv[2]
+model = sys.argv[3]
+model = PhonetizerModel('cpu', model)
+print(model.check_phonetization_error(word, phon))
